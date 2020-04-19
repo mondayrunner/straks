@@ -1,18 +1,17 @@
 <template>
   <Layout>
-    <article v-for="edge in $page.posts.edges" :key="edge.node.id">
-      <h2><a v-bind:href="edge.node.url" target="_new">{{ edge.node.title }}</a>&nbsp;<small v-if="edge.node.company">&mdash; {{ edge.node.company.Name }}</small></h2>
+    <article v-for="edge in $page.newsItems.edges" :key="edge.node.id">
+      <h2><a v-bind:href="edge.node.url" target="_new">{{ edge.node.title }}</a>&nbsp;<small v-if="edge.node.company">&mdash; {{ edge.node.company.name }}</small></h2>
       <p>{{ edge.node.content }}</p>
 
       <p class="link" v-if="edge.node.url"><a v-bind:href="edge.node.url" target="_new">{{ edge.node.url }}</a> &rarr;</p>
     </article>
-
   </Layout>
 </template>
 
 <page-query>
 query {
-  posts: allStrapiNewsItem {
+  newsItems: allStrapiNewsItems {
     edges {
       node {
         id
@@ -20,7 +19,7 @@ query {
         content
         url
         company {
-          Name
+          name
         }
       }
     }
@@ -28,10 +27,11 @@ query {
 }
 </page-query>
 
+
 <script>
 export default {
   metaInfo: {
-    title: 'Straks'
+    title: 'Nieuwsoverzicht'
   }
 }
 </script>
