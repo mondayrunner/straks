@@ -1,7 +1,7 @@
 <template>
   <Layout>
-    <h1>About us</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
+    <h1>Over deze website</h1>
+    <p>Zoveel bureau's, zo weinig tijd. Deze website is een initiatief van Tim van den Bosch. Connect <a href="https://www.linkedin.com/in/timvdbosch/">via LinkedIn</a> en stuur een berichtje als je iets wilt vragen!</p>
   </Layout>
 </template>
 
