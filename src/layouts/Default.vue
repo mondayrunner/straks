@@ -30,9 +30,11 @@ body {
   margin:0;
   padding:0;
   line-height: 1.5;
-  background: #fafafa;
-  background: linear-gradient(to right, #fafafa, #f8f8f8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: rgb(45, 96, 190);
+  /* background: linear-gradient(to left, #ffffff, #f4f7f8); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   min-height: 100vh;
+    background: linear-gradient(to right, rgb(27, 73, 160), rgb(45, 96, 190)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 p,
 h2 {
@@ -62,8 +64,12 @@ a:hover {
 .layout {
   max-width: 760px;
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 50px 100px;
+  /* border: 10px solid #111; */
+  background: #fafafa;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .layout a {
@@ -76,17 +82,19 @@ header {
   align-items: center;
   margin-bottom: 20px;
   height: 80px;
-  background: rgb(45, 96, 190);
-  background: linear-gradient(to right, rgb(27, 73, 160), rgb(45, 96, 190)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: rgb(34, 79, 161);
   padding-left: 30px;
   padding-right: 30px;
-  border-bottom: 1px solid #f1f1f1;
-  box-shadow: 0px 1px 5px rgb(211, 211, 211);
+  border-bottom: 1px solid #6085ca;
+  /* box-shadow: 0px 1px 5px rgb(211, 211, 211); */
 }
 
 h1,
-P {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+p {
+  font-size: 1rem;
+  color: #222;
+  padding-bottom: 4px;
+  /* font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; */
 }
 header a {
   text-decoration: none;
@@ -111,7 +119,6 @@ header strong a span {
   font-size: 0.9rem;
 }
 .nav__link {
-
   margin-left: 20px;
 }
 </style>

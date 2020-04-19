@@ -77,7 +77,6 @@ h2 a:hover {
   background:#e4f0fa;
 }
 
-
 p.link {
   text-align: right;
   font-size: 0.8rem;
