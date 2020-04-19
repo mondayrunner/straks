@@ -2,6 +2,7 @@
   <Layout>
     <article v-for="edge in $page.newsItems.edges" :key="edge.node.id">
       <h2><a v-bind:href="edge.node.url" target="_new">{{ edge.node.title }}</a>&nbsp;<small v-if="edge.node.company">&mdash; {{ edge.node.company.name }}</small></h2>
+      <time-ago :refresh="60" :datetime="new Date(edge.node.createdAt)" long></time-ago>
       <p>{{ edge.node.content }}</p>
 
       <p class="link" v-if="edge.node.url"><a v-bind:href="edge.node.url" target="_new">{{ edge.node.url }}</a> &rarr;</p>
@@ -18,6 +19,7 @@ query {
         title
         content
         url
+        createdAt
         company {
           name
         }
@@ -27,9 +29,13 @@ query {
 }
 </page-query>
 
-
 <script>
+import TimeAgo from 'vue2-timeago';
+
 export default {
+  components: {
+    TimeAgo,
+  },
   metaInfo: {
     title: 'Nieuwsoverzicht'
   }
@@ -43,18 +49,16 @@ article {
   padding-bottom: 1rem;
   margin-bottom: 1rem;
   border-bottom: 1px dotted #ddd;
-  /* border-left: 3px solid #ddd; */
 }
+
 
 article::after {
   position: absolute;
   top: 14px;
-  left: 2px;
+  left: 1px;
   border-left: 8px solid #ddd;
   border-top: 4px solid transparent;
   border-bottom: 4px solid transparent;
-  /* border-right: 10px solid transparent; */
-  /* border-top: 10px solid transparent; */
   width: 0;
   height: 0;
   content: "";

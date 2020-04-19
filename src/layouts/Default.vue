@@ -33,8 +33,8 @@ body {
   background: rgb(45, 96, 190);
   /* background: linear-gradient(to left, #ffffff, #f4f7f8); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   min-height: 100vh;
-    background: linear-gradient(to right, rgb(27, 73, 160), rgb(45, 96, 190)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: linear-gradient(to right, rgb(27, 73, 160), rgb(45, 96, 190)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding-bottom: 10rem;
 }
 p,
 h2 {
